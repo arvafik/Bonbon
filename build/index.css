@@ -1,0 +1,98 @@
+/* Variables */
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+#cover {
+  background-color: #FF9E80;
+  height: 400px;
+  color: #fff;
+}
+
+#cover #sartencio {
+  width: 10em;
+  margin-left: 600px;
+  margin-top: -130px;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav ul li {
+  font-weight: 700;
+  margin: 0 1rem;
+}
+
+.content {
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 100px auto;
+  font-size: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content #mini {
+  font-size: .3em;
+  color: #263238;
+}
+
+#curve {
+  margin-top: -5em;
+  width: 100%;
+}
+
+#curve path {
+  fill: #FF9E80;
+}
+
+#acerca {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 6em;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #263238;
+}
+/*# sourceMappingURL=index.css.map */

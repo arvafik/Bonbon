@@ -1,0 +1,82 @@
+/* Variables */
+$primary: #FF9E80;
+$primary-darker: #204582;
+$font-dark: #263238;
+$white: #fff ;
+
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+#cover {
+  background-color: $primary;
+  height: 400px;
+  color: $white;
+  #sartencio{
+    width: 10em;
+    margin-left: 600px;
+    margin-top: -130px;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  ul {
+    list-style-type: none;
+    display: flex;
+    li {
+      font-weight: 700;
+      margin: 0 1rem;
+    }
+  }
+}
+
+.content {
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 100px auto;
+  font-size: 3rem;
+  display: flex;
+  flex-direction: column;
+  #mini{
+    font-size: .3em;
+    color: $font-dark; 
+  }
+  
+  
+}
+
+#curve{
+  margin-top: -5em;
+  width: 100%;
+}
+#curve path{
+  fill: $primary;
+}
+
+#acerca{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6em;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2.5rem;
+  color: $font-dark;
+  
+}
+
