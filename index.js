@@ -1,7 +1,11 @@
-document.getElementById('button').addEventListener("click", function() {
-	document.querySelector('.bg-modal').style.display = "flex";
-});
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
 
-document.querySelector('.close').addEventListener("click", function() {
-	document.querySelector('.bg-modal').style.display = "none";
-});
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
