@@ -33,6 +33,10 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  #logo{
+    width: 12em;
+    margin-top: 2px;
+  }
   ul {
     list-style-type: none;
     display: flex;
@@ -69,15 +73,49 @@ nav {
 
 #acerca{
   display: flex;
+  margin-left: 60px;
+  margin-right: 60px;
   justify-content: center;
   align-items: center;
   margin-top: 6em;
   font-weight: 800;
-  text-transform: uppercase;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 1rem;
   color: $font-dark;
-  
+  flex-direction: column;
+  #titulo{
+    font-size: 2.5rem;
+    margin-top: 160px;
+  }
+  #acerca1{
+    display: flex;
+    flex-direction: row;
+    margin-left: 150px;
+    margin-top: 40px;
+    img:nth-child(1){
+      width: 140%;
+    }
+    #texto1{
+      padding-right: 150px;
+      padding-left: 150px;
+      padding-top: 70px;
+    }
+  }
+  #acerca2{
+    display: flex;
+    flex-direction: row;
+    margin-left: 110px;
+    margin-top: 60px;
+    img:nth-child(2){
+      width: 150%;
+    }
+    #texto2{
+      padding-top: 90px;
+    }
+  }
+  #creds{
+    margin-top: 65px;
+  }
 }
 
  /* The Modal (background) */
