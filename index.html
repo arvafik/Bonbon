@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <link rel="stylesheet" type="text/css" href="build/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/bulma.sass">
     <script src="index.js"></script>
     <title> Bonbon - Recetas </title>
 </head>
 <body>
     <section id="cover">
-        <div class="container">
+        <div class="cont">
           <nav>
             <img id="logo" src="images/bonbonnx.png" alt="bonbon*">
             <!-- <h1>Bonbon</h1>-->
@@ -20,7 +21,7 @@
             </ul>
           </div>
         </nav>
-          <div class="content">
+          <div class="convtent">
             <p>¡Comparte tus recetas de cocina! </p>
             <p id="mini">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
         </div>
@@ -49,29 +50,25 @@
           </div>
         </section>
 
- <!-- login  -->
- <div id="id01" class="modal">
-   <span onclick="document.getElementById('id01').style.display='none'"
- class="close" title="Cerrar">&times;</span>
- 
-   <!--  content -->
-   <form class="modal-content animate" action="/index.php">
-     <div class="imgcontainer">
-       <img src="https://www.goodpitbulls.com/wp-content/uploads/2012/10/lab-pit-bull-550x450.jpg" alt="user" class="avatar">
-     </div>
- 
-     <div class="container">
-       <label for="uname"><b>Usuario</b></label>
-       <input type="text" placeholder="Escribe tu usuario" name="uname" required>
-       <label for="psw"><b>Contraseña</b></label>
-       <input type="password" placeholder="Escribe tu contraseña" name="psw" required>
-       <button type="submit">Login</button>
-     </div>
- 
-     <div class="container" style="background-color:#f1f1f1">
-       <span class="psw">¿No tienes cuenta? <a href="#">Regístrate</a></span>
-     </div>
-   </form>
- </div> 
+ <section id="login">
+    <div id="id01" class="modal">
+      <span onclick="document.getElementById('id01').style.display='none'"
+    class="close" title="Cerrar">&times;</span>
+    
+      <!--  content -->
+      <form class="modal-content animate" action="/index.php" method="POST">
+        <div class="imgcontainer">
+          <img src="images/blackhair.png" alt="user" class="avatar">
+        </div>
+        <div class="container">
+          <label for="uname"><b>Usuario</b></label>
+          <input type="text" placeholder="Escribe tu usuario" name="uname" required>
+          <label for="psw"><b>Contraseña</b></label>
+          <input type="password" placeholder="Escribe tu contraseña" name="psw" required>
+          <button type="submit">Login</button>
+          <span class="psw">¿No tienes cuenta? <a href="#">Regístrate</a></span>
+      </form>
+    </div> 
+</section>
 </body>
 </html>
