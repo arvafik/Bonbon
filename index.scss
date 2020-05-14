@@ -1,11 +1,11 @@
 /* Variables */
-$primary: #FF9E80;
+$primary: #ff9e80;
 $font-dark: #263238;
-$white: #fff ;
+$white: #fff;
 
 * {
   box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 .cont {
@@ -17,7 +17,7 @@ $white: #fff ;
   background-color: $primary;
   height: 400px;
   color: $white;
-  #sartencio{
+  #sartencio {
     width: 10em;
     margin-left: 600px;
     margin-top: -130px;
@@ -28,7 +28,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  #logo{
+  #logo {
     width: 12em;
     margin-top: 2px;
   }
@@ -50,23 +50,21 @@ nav {
   font-size: 3rem;
   display: flex;
   flex-direction: column;
-  #mini{
-    font-size: .3em;
-    color: $font-dark; 
+  #mini {
+    font-size: 0.3em;
+    color: $font-dark;
   }
-  
-  
 }
 
-#curve{
+#curve {
   margin-top: -5em;
   width: 100%;
 }
-#curve path{
+#curve path {
   fill: $primary;
 }
 
-#acerca{
+#acerca {
   display: flex;
   margin-left: 60px;
   margin-right: 60px;
@@ -78,79 +76,78 @@ nav {
   font-size: 1rem;
   color: $font-dark;
   flex-direction: column;
-  #titulo{
+  #titulo {
     font-size: 2.5rem;
     margin-top: 160px;
   }
-  #acerca1{
+  #acerca1 {
     display: flex;
     flex-direction: row;
     margin-left: 150px;
     margin-top: 40px;
-    img:nth-child(1){
+    img:nth-child(1) {
       width: 140%;
     }
-    #texto1{
+    #texto1 {
       padding-right: 150px;
       padding-left: 150px;
       padding-top: 70px;
     }
   }
-  #acerca2{
+  #acerca2 {
     display: flex;
     flex-direction: row;
     margin-left: 110px;
     margin-top: 60px;
-    img:nth-child(2){
+    img:nth-child(2) {
       width: 150%;
     }
-    #texto2{
+    #texto2 {
       padding-top: 90px;
     }
   }
-  #creds{
+  #creds {
     margin-top: 65px;
   }
 }
 /*lo de atras*/
- .modal {
+.modal {
   display: none;
   position: fixed;
-  z-index: 1; 
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgba(0,0,0,0.4); 
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
   padding-top: 60px;
 }
 
 /* form */
 .modal-content {
   background-color: $white;
-  margin: 5px auto; 
+  margin: 5px auto;
   border: 1px solid #888;
-  width: 60%;
-  height: 80%;
+  width: 42%;
+  height: 85%;
   display: flex;
   flex-direction: column;
-    .imgcontainer{
-      display: flex;
-      width: 25%;
-      align-content: center;
-      margin-left: 40%;
-      margin-top: 2%;
-    }
-    .container{
-      display: flex;
-      flex-direction: column;
-      margin-left: 20%;
-      margin-right: 20%;
-      margin-top: 2%;    
-    }
+  .imgcontainer {
+    display: flex;
+    align-content: center;
+    width: 30%;
+    margin-left: 38%;
+    margin-top: 15%;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
+  }
 }
-
 
 .close {
   position: absolute;
@@ -169,15 +166,23 @@ nav {
 
 .animate {
   -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
+  animation: animatezoom 0.6s;
 }
 
 @-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)}
-  to {-webkit-transform: scale(1)}
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
 }
 
 @keyframes animatezoom {
-  from {transform: scale(0)}
-  to {transform: scale(1)}
-} 
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}

@@ -2,7 +2,7 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 .cont {
@@ -11,7 +11,7 @@
 }
 
 #cover {
-  background-color: #FF9E80;
+  background-color: #ff9e80;
   height: 400px;
   color: #fff;
 }
@@ -67,7 +67,7 @@ nav ul li {
 }
 
 .convtent #mini {
-  font-size: .3em;
+  font-size: 0.3em;
   color: #263238;
 }
 
@@ -77,7 +77,7 @@ nav ul li {
 }
 
 #curve path {
-  fill: #FF9E80;
+  fill: #ff9e80;
 }
 
 #acerca {
@@ -173,8 +173,8 @@ nav ul li {
   background-color: #fff;
   margin: 5px auto;
   border: 1px solid #888;
-  width: 60%;
-  height: 80%;
+  width: 42%;
+  height: 85%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -188,11 +188,11 @@ nav ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 25%;
   -ms-flex-line-pack: center;
       align-content: center;
-  margin-left: 40%;
-  margin-top: 2%;
+  width: 30%;
+  margin-left: 38%;
+  margin-top: 15%;
 }
 
 .modal-content .container {
@@ -205,7 +205,7 @@ nav ul li {
           flex-direction: column;
   margin-left: 20%;
   margin-right: 20%;
-  margin-top: 2%;
+  margin-top: 5%;
 }
 
 .close {
