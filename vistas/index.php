@@ -55,11 +55,9 @@
     class="close" title="Cerrar">&times;</span>
     
       <!--  content -->
-      <form class="modal-content animate" action="" method="POST">
+      <form class="modal-content animate" action="" method="POST" autocomplete="off">
       <?php
-            if(isset($errorLogin)){
-                echo $errorLogin;
-            }
+
         ?>
         <div class="imgcontainer">
           <img src="vistas/images/blackhair.png" alt="user" class="avatar">

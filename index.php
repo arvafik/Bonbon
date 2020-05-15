@@ -11,7 +11,8 @@ if(isset($_SESSION['user'])){
     $user->setUser($userSession->getCurrentUser());
     include_once 'vistas/home.php';
 
-}else if(isset($_POST['username']) && isset($_POST['password'])){
+}
+else if(isset($_POST['username']) && isset($_POST['password'])){
     
     $userForm = $_POST['username'];
     $passForm = $_POST['password'];
@@ -23,16 +24,14 @@ if(isset($_SESSION['user'])){
         $user->setUser($userForm);
 
         include_once 'vistas/home.php';
-    }else{
-        //echo "No existe el usuario";
-        $errorLogin = "Nombre de usuario y/o password incorrecto";
-        //include_once 'vistas/index.php';
     }
-}else{
+    else{
+        //echo "No existe el usuario";
+        echo "<script type='text/javascript'>alert('Nombre de usuario y/o password incorrecto');</script>";
+        include_once 'vistas/index.php';
+    }
+}
+else{
     //echo "login";
     include_once 'vistas/index.php';
 }
-
-
-
-?>
