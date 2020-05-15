@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <link rel="stylesheet" type="text/css" href="vistas/build/index.css">
 
-    <script src="index.js"></script>
+    <script src="vistas/index.js"></script>
     <title> Bonbon - Recetas </title>
 </head>
 <body>
@@ -56,6 +56,11 @@
     
       <!--  content -->
       <form class="modal-content animate" action="" method="POST">
+      <?php
+            if(isset($errorLogin)){
+                echo $errorLogin;
+            }
+        ?>
         <div class="imgcontainer">
           <img src="vistas/images/blackhair.png" alt="user" class="avatar">
         </div>
