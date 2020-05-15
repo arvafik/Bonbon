@@ -1,3 +1,5 @@
+/*mysql*/
+
 CREATE DATABASE bonbon;
 
 USE bonbon;
