@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <link rel="stylesheet" type="text/css" href="vistas/build/index.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/bulma.sass">
+
     <script src="index.js"></script>
     <title> Bonbon - Recetas </title>
 </head>
@@ -14,7 +14,6 @@
         <div class="cont">
           <nav>
             <img id="logo" src="vistas/images/bonbonnx.png" alt="bonbon*">
-            <!-- <h1>Bonbon</h1>-->
             <ul>
               <li>Acerca</li>
               <li><a id="login" class="button" onclick="document.getElementById('id01').style.display='block'">Login</a></li>
@@ -62,11 +61,11 @@
         </div>
         <div class="container">
           <label for="uname"><b>Usuario</b></label>
-          <input type="text" placeholder="Escribe tu usuario" name="uname" required>
+          <input type="text" placeholder="Escribe tu usuario" name="username" required>
           <label for="psw"><b>Contraseña</b></label>
-          <input type="password" placeholder="Escribe tu contraseña" name="psw" required>
+          <input type="password" placeholder="Escribe tu contraseña" name="password" required>
           <button type="submit">Login</button>
-          <span class="psw">¿No tienes cuenta? <a href="#">Regístrate</a></span>
+          <!-- <span>¿No tienes cuenta? <a href="#">Regístrate</a></span>-->
       </form>
     </div> 
 </section>
