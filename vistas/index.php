@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-    <link rel="stylesheet" type="text/css" href="build/index.css">
+    <link rel="stylesheet" type="text/css" href="vistas/build/index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/bulma.sass">
     <script src="index.js"></script>
     <title> Bonbon - Recetas </title>
@@ -13,7 +13,7 @@
     <section id="cover">
         <div class="cont">
           <nav>
-            <img id="logo" src="images/bonbonnx.png" alt="bonbon*">
+            <img id="logo" src="vistas/images/bonbonnx.png" alt="bonbon*">
             <!-- <h1>Bonbon</h1>-->
             <ul>
               <li>Acerca</li>
@@ -27,14 +27,14 @@
         </div>
         <svg id="curve" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 196"><path class="cls-1" d="M1194.5,532.5" transform="translate(0 0)"/><path class="cls-2" d="M462,196" transform="translate(0 0)"/><path class="cls-2" d="M0,98s298,98,700,98,700-98,700-98V0H0Z" transform="translate(0 0)"/></svg>      <div class="overlay overlay--hidden"></div>
       <div id="imagen">        
-        <img id="sartencio" src="images/Artboard 2.png" alt="sarten">
+        <img id="sartencio" src="vistas/images/Artboard 2.png" alt="sarten">
       </div>
       </section>
 
         <section id="acerca">
           <p id="titulo">ACERCA</p>
           <div id="acerca1">
-            <img id="imagen1" src="images/orangehair.png" alt="chico cocinando">
+            <img id="imagen1" src="vistas/images/orangehair.png" alt="chico cocinando">
             <div id="texto1">
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum dolor et amet sed sequi ad voluptas facere, aliquam neque magni aliquid iure, vel, quidem adipisci. Reiciendis dolore omnis sequi earum?</p>
             </div>
@@ -43,7 +43,7 @@
             <div id="texto2">
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat obcaecati nobis suscipit ipsam doloremque, eaque est. Tempora vero nam totam explicabo, aut neque voluptatum, corporis voluptatem temporibus assumenda in possimus.</p>
             </div>
-            <img id="imagen2" src="images/cookin.png" alt="cocinando" >
+            <img id="imagen2" src="vistas/images/cookin.png" alt="cocinando" >
           </div> 
           <div id="creds">
             <h1>made with <3 </h1>
@@ -56,9 +56,9 @@
     class="close" title="Cerrar">&times;</span>
     
       <!--  content -->
-      <form class="modal-content animate" action="/index.php" method="POST">
+      <form class="modal-content animate" action="" method="POST">
         <div class="imgcontainer">
-          <img src="images/blackhair.png" alt="user" class="avatar">
+          <img src="vistas/images/blackhair.png" alt="user" class="avatar">
         </div>
         <div class="container">
           <label for="uname"><b>Usuario</b></label>
