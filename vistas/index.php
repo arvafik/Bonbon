@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <link rel="stylesheet" type="text/css" href="vistas/build/index.css">
-
+    
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
     <script src="vistas/index.js"></script>
     <title> Bonbon - Recetas </title>
 </head>
@@ -59,6 +60,41 @@
       <?php
 
         ?>
+
+        
+        <div class="container">
+
+          <div class="img">
+            <img src="vistas/images/bg.svg">
+          </div>
+
+          <div class="login-content">
+          
+        <div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<h5>Username</h5>
+           		   		<input type="text" class="input" name="username" required>
+           		   </div>
+           		</div>
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<h5>Password</h5>
+           		    	<input type="password" class="input" name="password" required>
+            	   </div>
+            	</div>
+            	<a href="#">Forgot Password?</a>
+            	<input type="submit" class="btn" value="Login">
+        </div>
+        </div>
+        
+
+<!--XD
         <div class="imgcontainer">
           <img src="vistas/images/blackhair.png" alt="user" class="avatar">
         </div>
@@ -68,7 +104,7 @@
           <label for="psw"><b>Contraseña</b></label>
           <input type="password" placeholder="Escribe tu contraseña" name="password" required>
           <button type="submit">Login</button>
-          <!-- <span>¿No tienes cuenta? <a href="#">Regístrate</a></span>-->
+           <span>¿No tienes cuenta? <a href="#">Regístrate</a></span>-->
       </form>
     </div> 
 </section>
