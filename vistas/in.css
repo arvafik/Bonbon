@@ -1,0 +1,175 @@
+:root {
+  --primary: #ff9e80;
+  --font-dark: #263238;
+  --white: #fff;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  display: flex;
+}
+
+#cover {
+  background-color: var(--primary);
+  height: 28rem;
+  color: var(--white);
+}
+.cont {
+  max-width: 50rem;
+  margin: 0 auto;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav a{
+  color: var(--white);
+}
+#logo {
+  width: 12em;
+  margin-top: 2px;
+}
+ul {
+  display: flex;
+  list-style-type: none;
+}
+li {
+  font-weight: 700;
+  margin: 0 1rem;
+}
+.convtent {
+  display: flex;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 3rem;
+  flex-direction: column;
+  margin-top: 2em;
+}
+
+#mini {
+  font-size: 0.3em;
+  color: var(--font-dark);
+  margin-bottom: 6em;
+}
+
+#curve {
+  margin-top: 6em;
+  width: 100%;
+}
+
+#acerca {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 14em;
+  margin-left: 8em;
+  margin-right: 8em;
+  /*max-width: 60rem;*/
+}
+#acerca1 {
+  display: flex;
+  flex-direction: row;
+}
+#acerca2 {
+  display: flex;
+  flex-direction: row;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 2em;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  flex-flow: row;
+  overflow: hidden;
+  background-color: var(--white);
+  margin: 5px auto;
+  border: 1px solid #888;
+  width: 70%;
+  height: 90%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-flow: row;
+}
+.login-content {
+  display: flex;
+}
+.login-content img {
+  margin: 11%;
+  width: 21em;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 4;
+  width: 30em;
+}
+
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/*responsive*/
+@media (max-width: 1300px) {
+  #curve {
+    margin-top: -2em;
+  }
+}
+
+@media (max-width: 1000px) {
+  #curve {
+    margin-top: -3.5em;
+  }
+}

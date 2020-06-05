@@ -333,3 +333,14 @@ nav {
     transform: scale(1);
   }
 }
+
+
+
+
+//responsive xd
+
+@media only screen and (max-width: 1030px) {
+  .curve{
+    display: none;
+  }
+}
