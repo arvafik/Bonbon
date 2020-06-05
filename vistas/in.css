@@ -46,7 +46,7 @@ li {
   text-align: center;
   font-size: 3rem;
   flex-direction: column;
-  margin-top: 2em;
+  margin-top: 4em;
 }
 
 #mini {
@@ -56,7 +56,7 @@ li {
 }
 
 #curve {
-  margin-top: 6em;
+  margin-top: -1em;
   width: 100%;
 }
 

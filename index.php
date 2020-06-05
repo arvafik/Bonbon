@@ -9,7 +9,7 @@ $user = new User();
 if(isset($_SESSION['user'])){
     //echo "hay sesion";
     $user->setUser($userSession->getCurrentUser());
-    include_once 'vistas/home.php';
+    include_once 'vistas/dashboard.php';
 
 }
 else if(isset($_POST['username']) && isset($_POST['password'])){
@@ -23,7 +23,7 @@ else if(isset($_POST['username']) && isset($_POST['password'])){
         $userSession->setCurrentUser($userForm);
         $user->setUser($userForm);
 
-        include_once 'vistas/home.php';
+        include_once 'vistas/dashboard.php';
     }
     else{
         //echo "No existe el usuario";
