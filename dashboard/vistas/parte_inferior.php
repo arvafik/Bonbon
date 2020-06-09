@@ -2,11 +2,11 @@
 <!-- End of Main Content -->
 
 <!-- Footer -->
-<footer class="sticky-footer bg-white">
-  <div class="container my-auto">
-    <div class="copyright text-center my-auto">
-      <span>Copyright &copy; Your Website 2019</span>
-    </div>
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      Bonbon - Recetas &copy; 2020
+    </p>
   </div>
 </footer>
 <!-- End of Footer -->
@@ -17,28 +17,21 @@
 </div>
 <!-- End of Page Wrapper -->
 
-<!-- Scroll to Top Button-->
-<a class="scroll-to-top rounded" href="#page-top">
-  <i class="fas fa-angle-up"></i>
-</a>
-
 <!-- Logout Modal-->
-<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">¿Confirma salir y cerrar sesión?</h5>
-        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">×</span>
-        </button>
-      </div>
-      <div class="modal-body"></div>
-      <div class="modal-footer">
-        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-        <a class="btn btn-primary" href="../bd/logout.php">Salir</a>
 
-      </div>
-    </div>
+<div class="modal" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">¿Confirma salir y cerrar sesión?</p>
+      <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+    </header>
+    <section class="modal-card-body">
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button is-danger" type="button" data-dismiss="modal">Cancelar</button>
+      <a class="button is-primary" href="../bd/logout.php">Salir</a>
+    </footer>
   </div>
 </div>
 

@@ -30,7 +30,7 @@ if ($_SESSION["s_usuario"] === null) {
         <div class="buttons">
           <a>
           </a>
-          <a class="button is-light" href="includes/logout.php">
+          <a class="button is-primary" href="#" data-toggle="modal" data-target="#logoutModal"">
             Cerrar sesión
           </a>
         </div>
@@ -45,6 +45,5 @@ if ($_SESSION["s_usuario"] === null) {
     </p>
     <ul class="menu-list">
       <li><a href="index.php">Dashboard</a></li>
-      <li><a href="misRecetas.php">Mis recetas</a></li>
     </ul>
   </aside>

@@ -89,7 +89,6 @@
                         </div>
                       </div>
 
-                      <a href="#">¿No tienes cuenta? Regístrate</a> <br>
                       <button class="button is-danger is-rounded" type="submit" value="Login">Iniciar Sesión</button>
                     </div>
                   </div>
