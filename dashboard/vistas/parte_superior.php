@@ -30,7 +30,7 @@ if ($_SESSION["s_usuario"] === null) {
         <div class="buttons">
           <a>
           </a>
-          <a class="button is-primary" href="#" data-toggle="modal" data-target="#logoutModal"">
+          <a class="button is-warning is-light" href="#" data-toggle="modal" data-target="#logoutModal"">
             Cerrar sesión
           </a>
         </div>
