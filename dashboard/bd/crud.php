@@ -35,7 +35,7 @@ switch($opcion){
         $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
         break;        
     case 3://baja
-        $consulta = "DELETE FROM recetas WHERE id='$id' ";		
+        $consulta = "DELETE FROM recetas WHERE RecetaID='$id' ";		
         $resultado = $conexion->prepare($consulta);
         $resultado->execute();                           
         break;        

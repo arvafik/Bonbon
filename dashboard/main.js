@@ -40,12 +40,17 @@ $(document).on("click", ".btnEditar", function(){
     fila = $(this).closest("tr");
     id = parseInt(fila.find('td:eq(0)').text());
     nombre = fila.find('td:eq(1)').text();
-    pais = fila.find('td:eq(2)').text();
-    edad = parseInt(fila.find('td:eq(3)').text());
+    descripcion = fila.find('td:eq(2)').text();
+    dificultad = fila.find('td:eq(3)').text();
+    tiempococcion = fila.find('td:eq(4)').text();
+    categoria = fila.find('td:eq(5)').text();
     
     $("#nombre").val(nombre);
-    $("#pais").val(pais);
-    $("#edad").val(edad);
+    $("#descripcion").val(descripcion);
+    $("#dificultad").val(dificultad);
+    $("#tiempococcion").val(tiempococcion);
+    $("#categoria").val(categoria);
+
     opcion = 2; //editar
     
     $(".modal-header").css("background-color", "#4e73df");
@@ -60,7 +65,7 @@ $(document).on("click", ".btnBorrar", function(){
     fila = $(this);
     id = parseInt($(this).closest("tr").find('td:eq(0)').text());
     opcion = 3 //borrar
-    var respuesta = confirm("¿Está seguro de eliminar el registro: "+id+"?");
+    var respuesta = confirm("¿Está seguro de eliminar la receta número: "+id+"?");
     if(respuesta){
         $.ajax({
             url: "bd/crud.php",
