@@ -32,7 +32,7 @@ $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
                 <th>Acciones</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody>   
             <?php
             foreach ($data as $dat) {
             ?>

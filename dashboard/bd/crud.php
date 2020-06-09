@@ -4,8 +4,8 @@ $objeto = new Conexion();
 $conexion = $objeto->Conectar();
 // Recepción de los datos enviados mediante POST desde el JS   
 
-
-$nombre = (isset($_POST['nombre'])) ? $_POST['nombre'] : '';
+$data[] =  array();
+$nombre =  (isset($_POST['nombre'])) ? $_POST['nombre'] : '';
 $descripcion = (isset($_POST['descripcion'])) ? $_POST['descripcion'] : '';
 $dificultad = (isset($_POST['dificultad'])) ? $_POST['dificultad'] : '';
 $tiempococcion = (isset($_POST['tiempococcion'])) ? $_POST['tiempococcion'] : '';
@@ -19,7 +19,7 @@ switch($opcion){
         $resultado = $conexion->prepare($consulta);
         $resultado->execute(); 
 
-        $consulta = "SELECT RecetaID, Nombre, Descripcion, Dificultad, TiempoCoccion, Categoria FROM recetas ORDER BY id DESC LIMIT 1";
+        $consulta = "SELECT RecetaID, Nombre, Descripcion, Dificultad, TiempoCoccion, Categoria FROM recetas ORDER BY RecetaID DESC LIMIT 1";
         $resultado = $conexion->prepare($consulta);
         $resultado->execute();
         $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
@@ -41,5 +41,8 @@ switch($opcion){
         break;        
 }
 
-print json_encode($data, JSON_UNESCAPED_UNICODE); //enviar el array final en formato json a JS
+header('Content-type: application/json'); 
+echo json_encode($data); 
 $conexion = NULL;
+
+?>

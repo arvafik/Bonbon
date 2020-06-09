@@ -93,14 +93,22 @@ $("#formRecetas").submit(function(e){
         data: {id:id, nombre:nombre, descripcion:descripcion, dificultad:dificultad, tiempococcion:tiempococcion, categoria:categoria, opcion:opcion},
         success: function(data){  
             console.log(data);
-            id = data[0].id;            
-            nombre = data[0].nombre;
-            descripcion = data[0].descripcion;
-            dificultad = data[0].dificultad;
-            tiempococcion = data[0].tiempococcion;
-            categoria = data[0].categoria;
-            if(opcion == 1){tabla.row.add([id,nombre,descripcion,dificultad,tiempococcion,categoria]).draw();}
-            else{tabla.row(fila).data([id,nombre,descripcion,dificultad,tiempococcion,categoria]).draw();}         
+            console.log(data[0].RecetaID);
+            id = data[0].RecetaID;            
+            
+
+            nombre = data[0].Nombre;
+            descripcion = data[0].Descripcion;
+            dificultad = data[0].Dificultad;
+            tiempococcion = data[0].TiempoCoccion;
+            categoria = data[0].Categoria;
+            tabla.row.add([id,nombre,descripcion,dificultad,tiempococcion,categoria]).draw();
+            if(opcion == 1){
+               
+            }
+            else{
+                tabla.row(fila).data([id,nombre,descripcion,dificultad,tiempococcion,categoria]).draw();
+            }         
         }        
     });
     $("#modalCRUD").modal("hide"); 
