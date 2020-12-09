@@ -7,8 +7,12 @@ include_once '../bd/conexion.php';
 $objeto = new Conexion();
 $conexion = $objeto->Conectar();
 $usuario = $_SESSION["s_usuario"];
-$consulta = "SELECT RecetaID, Nombre, Descripcion, Dificultad, TiempoCoccion, Categoria FROM recetas WHERE NUsuario = (SELECT id FROM usuarios WHERE usuario ='$usuario') ";
+// $consulta = "SELECT RecetaID, Nombre, Descripcion, Dificultad, TiempoCoccion, Categoria FROM recetas WHERE NUsuario = (SELECT id FROM usuarios WHERE usuario ='$usuario') ";
+$consulta = "SELECT RecetaID, Nombre, Descripcion, Dificultad, TiempoCoccion, Categoria FROM recetas WHERE NUsuario = (SELECT id FROM usuarios WHERE usuario = :usuario) ";
 $resultado = $conexion->prepare($consulta);
+
+$resultado->bindParam(':usuario', $usuario);
+
 $resultado->execute();
 $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
 ?>

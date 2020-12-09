@@ -1,4 +1,4 @@
-console.log("DONDE ESTOY HOLA")
+console.log("index js")
 const toggleSwitch = document.querySelector(
     '.theme-switch input[type="checkbox"]'
   );

@@ -1,4 +1,4 @@
-console.log("HOLAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+console.log("mis recetas");
 
 const toggleSwitch = document.querySelector(
     '.theme-switch input[type="checkbox"]'

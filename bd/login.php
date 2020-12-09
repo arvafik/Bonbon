@@ -11,8 +11,12 @@ $password = (isset($_POST['password'])) ? $_POST['password'] : '';
 //encriptacion
 $pass = md5($password); 
 
-$consulta = "SELECT * FROM usuarios WHERE usuario='$usuario' AND password='$pass' ";
+// $consulta = "SELECT * FROM usuarios WHERE usuario='$usuario' AND password='$pass' ";
+$consulta = "SELECT * FROM usuarios WHERE usuario = :usuario AND password = :pass ";
 $resultado = $conexion->prepare($consulta);
+$resultado->bindParam(':usuario', $usuario);
+$resultado->bindParam(':pass', $pass);
+
 $resultado->execute();
 
 if($resultado->rowCount() >= 1){
@@ -32,3 +36,6 @@ $conexion=null;
 
 //admin   12345
 //demo    demo
+//Jess    munchi
+//Felipe  password
+//Oswaldo hola
