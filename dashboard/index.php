@@ -12,8 +12,9 @@ $resultado = $conexion->prepare($consulta);
 $resultado->execute();
 $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
 ?>
-<div class="cont-index">
-    <div class="container">
+
+<div class="contenido">
+    <div class="container"> 
         <h1 class="title is-1">¿Qué vamos a cocinar hoy, <?php echo $_SESSION["s_usuario"]; ?>?</h1>
         <button id="btnNuevo" class="button is-warning" type="button" data-toggle="modal">Añadir receta</button>
     </div>
@@ -29,7 +30,7 @@ $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
                     <th>Dificultad</th>
                     <th>Tiempo de cocción</th>
                     <th>Categoría</th>
-                    <th>Acciones</th>
+                    <!-- <th>Acciones</th> -->
                 </tr>
             </thead>
             <tbody>
@@ -43,7 +44,6 @@ $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
                         <td><?php echo $dat['Dificultad'] ?></td>
                         <td><?php echo $dat['TiempoCoccion'] ?></td>
                         <td><?php echo $dat['Categoria'] ?></td>
-                        <td></td>
                     </tr>
                 <?php
                 }
@@ -73,6 +73,7 @@ $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
                     <input id="tiempococcion" class="input" type="text" placeholder="Escribe aquí el tiempo de cocción">
                     <label>Categoría:</label>
                     <input id="categoria" class="input" type="text" placeholder="Escribe aquí la categoría">
+                    <input id="usuarioNombre" type="hidden" name="usuarioNombre" value="<?=$_SESSION["s_usuario"];?>"></input>
             </section>
             <footer class="modal-card-foot">
                 <button type="button" class="button is-danger" data-dismiss="modal">Cancelar</button>

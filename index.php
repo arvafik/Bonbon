@@ -1,31 +1,30 @@
 <!doctype html>
-<html>
-
 <head>
   <link rel="shortcut icon" href="#" />
-  <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>bonbon</title>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" />
-  <link rel="stylesheet" href="estilos.css">
-  <link rel="stylesheet" href="plugins/sweetalert2/sweetalert2.min.css">
+  <link rel="stylesheet" href="bulma.min.css"/>
+  <link rel="stylesheet" href="index.css">
+  <link rel="icon" type="image/png" href="vistas/images/favicon1.ico"/>
   <script src="https://kit.fontawesome.com/a81368914c.js"></script>
-  <link rel="stylesheet" type="text/css" href="fuentes/iconic/css/material-design-iconic-font.min.css">
 
 </head>
-
-<body>
-
 
   <body>
     <section id="cover">
       <div class="cont">
         <nav>
           <img id="logo" src="vistas/images/bonbonnx.png" alt="bonbon*">
+          <!-- <img id="logo" src="vistas/images/bonbonnxDark.png" alt="bonbon*"> -->
           <ul>
-            <li>Acerca</li>
+            <div class="theme-switch-wrapper">
+              <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                  <div class="slider round"></div>
+              </label>
+            </div>
             <li><a id="login" onclick="document.getElementById('id01').style.display='block'">Login</a></li>
           </ul>
       </div>
@@ -35,7 +34,8 @@
         <p id="mini">Aquí encontrarás todas las recetas más deliciosas del internet..</p>
       </div>
       <svg id="curve" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#ff9e80" fill-opacity="1" d="M0,96L26.7,101.3C53.3,107,107,117,160,106.7C213.3,96,267,64,320,53.3C373.3,43,427,53,480,85.3C533.3,117,587,171,640,208C693.3,245,747,267,800,229.3C853.3,192,907,96,960,96C1013.3,96,1067,192,1120,208C1173.3,224,1227,160,1280,138.7C1333.3,117,1387,139,1413,149.3L1440,160L1440,0L1413.3,0C1386.7,0,1333,0,1280,0C1226.7,0,1173,0,1120,0C1066.7,0,1013,0,960,0C906.7,0,853,0,800,0C746.7,0,693,0,640,0C586.7,0,533,0,480,0C426.7,0,373,0,320,0C266.7,0,213,0,160,0C106.7,0,53,0,27,0L0,0Z"></path>
+      <!-- #375A7F #ff9e80-->
+        <path fill="var(--primary)" fill-opacity="1" d="M0,96L26.7,101.3C53.3,107,107,117,160,106.7C213.3,96,267,64,320,53.3C373.3,43,427,53,480,85.3C533.3,117,587,171,640,208C693.3,245,747,267,800,229.3C853.3,192,907,96,960,96C1013.3,96,1067,192,1120,208C1173.3,224,1227,160,1280,138.7C1333.3,117,1387,139,1413,149.3L1440,160L1440,0L1413.3,0C1386.7,0,1333,0,1280,0C1226.7,0,1173,0,1120,0C1066.7,0,1013,0,960,0C906.7,0,853,0,800,0C746.7,0,693,0,640,0C586.7,0,533,0,480,0C426.7,0,373,0,320,0C266.7,0,213,0,160,0C106.7,0,53,0,27,0L0,0Z"></path>
       </svg>
 
       </div>
@@ -58,11 +58,9 @@
       <div id="creds">
         <h1>made with <3 </h1> </div> </section> <section id="login">
 
-
-        
             <div id="id01" class="modal">
               <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Cerrar">&times;</span>
-              <!--  content -->
+              <!-- content -->
               <form id="formLogin" class="modal-content animate" action="" method="POST" autocomplete="off">
                 <?php                ?>
                 <div class="container">
@@ -88,12 +86,10 @@
                           </span>
                         </div>
                       </div>
-
                       <button class="button is-danger is-rounded" type="submit" value="Login">Iniciar Sesión</button>
                     </div>
                   </div>
                 </div>
-
               </form>
             </div>
     </section>
@@ -102,9 +98,7 @@
   <script src="jquery/jquery-3.3.1.min.js"></script>
   <script src="bootstrap/js/bootstrap.min.js"></script>
   <script src="popper/popper.min.js"></script>
-
   <script src="plugins/sweetalert2/sweetalert2.all.min.js"></script>
   <script src="codigo.js"></script>
-</body>
 
 </html>

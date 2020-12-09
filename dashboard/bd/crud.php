@@ -12,10 +12,11 @@ $tiempococcion = (isset($_POST['tiempococcion'])) ? $_POST['tiempococcion'] : ''
 $categoria = (isset($_POST['categoria'])) ? $_POST['categoria'] : '';
 $opcion = (isset($_POST['opcion'])) ? $_POST['opcion'] : '';
 $id = (isset($_POST['id'])) ? $_POST['id'] : '';
+$usuarioNombre = (isset($_POST['usuarioNombre'])) ? $_POST['usuarioNombre'] : '';
 
 switch($opcion){
     case 1: //alta
-        $consulta = "INSERT INTO recetas (Descripcion, Dificultad, TiempoCoccion, Nombre, Categoria) VALUES ('$descripcion','$dificultad','$tiempococcion','$nombre','$categoria')";			
+        $consulta = "INSERT INTO recetas (Descripcion, Dificultad, TiempoCoccion, Nombre, Categoria, NUsuario) VALUES ('$descripcion','$dificultad','$tiempococcion','$nombre','$categoria', (SELECT id FROM usuarios WHERE usuario = '$usuarioNombre')  )";			
         $resultado = $conexion->prepare($consulta);
         $resultado->execute(); 
 

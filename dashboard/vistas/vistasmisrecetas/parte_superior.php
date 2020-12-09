@@ -16,7 +16,7 @@ if ($_SESSION["s_usuario"] === null) {
   <link rel="stylesheet" href="vistas/style.css">
   <!-- <link id="alt" rel="stylesheet" href="darkly.min.css"> -->
   <link rel="icon" type="image/png" href="../vistas/images/favicon1.ico"/>
-  <title>Dashboard - bonbon</title>
+  <title>Mis recetas - bonbon</title>
 </head>
 
 <body>

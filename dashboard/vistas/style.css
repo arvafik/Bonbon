@@ -1,16 +1,128 @@
-
-:root {
+[data-theme="dark"]{
+  --primary: #1F2D3B;
+  --font-color: #8C9B9D;
+  --bg: #8C9B9D;
+  --ogbg: #343C3D;
+  --other: #1F2D3B;
+  --font-color2:#fff;
+}
+html {
   --primary: #ff9e80;
-  --font-dark: #263238;
-  --white: #fff;
+  --font-color: #263238;
+  --bg: #fff;
+  --ogbg: #fff;
+  --other: #fff;
+  --font-color2:#263238;
+  background: var(--ogbg);
+}
+
+.footer{
+    background: var(--ogbg);
+    color:var(--font-color2);
 }
 
 .navbar {
   background-color: var(--primary);
-  color: var(--white)
 }
 
 .navbar a {
-  color: var(--white);
   margin-right: 3em;
+}
+#Logout{
+  color:var(--bg);
+  background-color: var(--primary);
+}
+.contenido{
+  color: var(--font-color2);
+}
+.contenido h1{
+  color: var(--font-color2);
+}
+.row{
+  background: var(--ogbg);  
+}
+#tabla{
+   background: var(--ogbg); 
+   color: var(--font-color2);
+}
+#tabla th{
+  color:var(--font-color2);
+}
+#tabla tbody{
+  color:var(--font-color);
+}
+.menu a{
+  color: var(--font-color2);
+}
+
+/*slider switch css */
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+}
+.theme-switch {
+  display: inline-block;
+  height: 30px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display:none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 2px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.modal{
+  color:var(--font-color2);
+
+}
+.modal-card header{
+  background-color: var(--other);
+}
+.modal-card header p{
+  background-color: var(--other);
+  color:var(--font-color2)
+}
+.modal-card-body{
+  background-color: var(--other)
+}
+.modal-card-foot{
+  background-color: var(--other);
 }

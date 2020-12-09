@@ -1,5 +1,5 @@
 </div>
-<!-- End of Main Content -->
+<!-- main content -->
 
 <!-- Footer -->
 <footer class="footer">
@@ -9,16 +9,17 @@
     </p>
   </div>
 </footer>
-<!-- End of Footer -->
+<!-- footer -->
 
 </div>
-<!-- End of Content Wrapper -->
+<!-- content wrapper -->
 
 </div>
-<!-- End of Page Wrapper -->
+<!-- page wrapper -->
 
-<!-- Logout Modal-->
- <div class="modal" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- modal para salir-->
+
+<div class="modal" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-background"></div>
   <div class="modal-card">
     <header class="modal-card-head">
@@ -41,7 +42,7 @@
 <script src="../plugins/sweetalert2/sweetalert2.all.min.js"></script>
 <!-- datatables js plugin -->
 <script type="text/javascript" src="vendor/datatables/datatables.min.js"></script>
-<script type="text/javascript" src="../dashboard/index.js"></script>
+<script type="text/javascript" src="../dashboard/misRecetas.js"></script>
 <script src="https://kit.fontawesome.com/a81368914c.js"></script>
 
 <link rel="stylesheet" href="vistas/style.css">

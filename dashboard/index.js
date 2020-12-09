@@ -1,10 +1,34 @@
+console.log("DONDE ESTOY HOLA")
+const toggleSwitch = document.querySelector(
+    '.theme-switch input[type="checkbox"]'
+  );
+  const currentTheme = localStorage.getItem("theme");
+  
+  if (currentTheme) {
+    document.documentElement.setAttribute("data-theme", currentTheme);
+  
+    if (currentTheme === "dark") {
+      toggleSwitch.checked = true;
+      console.log("guardado")
+    }
+  }
+  
+  function switchTheme(e) {
+    if (e.target.checked) {
+          document.documentElement.setAttribute("data-theme", "dark");
+          localStorage.setItem("theme", "dark");
+          console.log("dark");
+    } else {
+          document.documentElement.setAttribute("data-theme", "light");
+          localStorage.setItem("theme", "light");
+          console.log("light");
+    }
+  }
+  
+  toggleSwitch.addEventListener("change", switchTheme, false);
+
 $(document).ready(function(){
     tabla = $("#tabla").DataTable({
-       "columnDefs":[{
-        "targets": -1,
-        "data":null,
-        "defaultContent": "<button class='button is-info btnEditar'>Editar</button><button class='button is-danger btnBorrar'>Borrar</button>"  
-       }],
         
     "language": {
             "lengthMenu": "Mostrar _MENU_ registros",
@@ -81,34 +105,36 @@ $(document).on("click", ".btnBorrar", function(){
     
 $("#formRecetas").submit(function(e){ 
     e.preventDefault();    
+    
     nombre = $.trim($("#nombre").val());
     descripcion = $.trim($("#descripcion").val());
     dificultad = $.trim($("#dificultad").val());  
     tiempococcion = $.trim($("#tiempococcion").val());  
-    categoria = $.trim($("#categoria").val());    
+    categoria = $.trim($("#categoria").val());  
+    usuarioNombre = $.trim($("#usuarioNombre").val());  
     $.ajax({
         url: "bd/crud.php",
         type: "POST",
         dataType: "json",
-        data: {id:id, nombre:nombre, descripcion:descripcion, dificultad:dificultad, tiempococcion:tiempococcion, categoria:categoria, opcion:opcion},
+        data: {id:id, nombre:nombre, descripcion:descripcion, dificultad:dificultad, tiempococcion:tiempococcion, categoria:categoria, usuarioNombre:usuarioNombre, opcion:opcion},
         success: function(data){  
             console.log(data);
             console.log(data[0].RecetaID);
             id = data[0].RecetaID;            
-            
-
             nombre = data[0].Nombre;
             descripcion = data[0].Descripcion;
             dificultad = data[0].Dificultad;
             tiempococcion = data[0].TiempoCoccion;
             categoria = data[0].Categoria;
-            tabla.row.add([id,nombre,descripcion,dificultad,tiempococcion,categoria]).draw();
+            usuarioNombre = data[0].UsuarioNombre;
+            console.log(data);
+            //tabla.row.add([id,nombre,descripcion,dificultad,tiempococcion,categoria]).draw();
             if(opcion == 1){
-               
+                tabla.row.add([id,nombre,descripcion,dificultad,tiempococcion,categoria]).draw();
             }
             else{
                 tabla.row(fila).data([id,nombre,descripcion,dificultad,tiempococcion,categoria]).draw();
-            }         
+            }            
         }        
     });
     $("#modalCRUD").modal("hide"); 
@@ -116,3 +142,22 @@ $("#formRecetas").submit(function(e){
 });    
     
 });
+$('#Logout').click(function(){
+  
+    swal({
+    title: 'Are you sure?',
+    text: "It will permanently deleted !",
+    type: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes, delete it!'
+  }).then(function() {
+    swal(
+      'Deleted!',
+      'Your file has been deleted.',
+      'success'
+    );
+  })
+    
+  })
