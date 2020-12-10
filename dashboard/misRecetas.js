@@ -1,5 +1,64 @@
 console.log("mis recetas");
 
+function uploadXML() {
+            document.getElementById("file").click();
+        }
+          var readXml=null;
+
+ $('#file').on('change', function () {
+     event.preventDefault();
+           var selectedFile = document.getElementById('file').files[0];
+           console.log(selectedFile);
+           var reader = new FileReader();
+           reader.onload = function(e) {
+               readXml=e.target.result;
+               console.log(readXml);
+               var parser = new DOMParser();
+               var doc = parser.parseFromString(readXml, "application/xml");
+               $('#nombre').val(doc.all[1].innerHTML);
+               $('#descripcion').val(doc.all[2].innerHTML);
+               $('#dificultad').val(doc.all[3].innerHTML);
+               $('#tiempococcion').val(doc.all[4].innerHTML);
+               $('#categoria').val(doc.all[5].innerHTML);
+           }
+           reader.readAsText(selectedFile);
+     
+});       
+        
+      
+       
+       
+function generarXML(){
+        var xml = '<?xml version="1.0" encoding="UTF-8"?> \n';
+        xml += '    <receta> \n';
+        xml += '        <nombre>'+$('#nombre').val()+'</nombre> \n';
+        xml += '        <descripcion>'+$('#descripcion').val()+'</descripcion> \n';
+        xml += '        <dificultad>'+$('#dificultad').val()+'</dificultad> \n';
+        xml += '        <tiempococcion>'+$('#tiempococcion').val()+'</tiempococcion> \n';
+        xml += '        <categoria>'+$('#categoria').val()+'</categoria> \n';
+        xml += '    </receta>'
+        download(xml ,'sourceCode', 'xml');
+    }
+
+    function download(data, filename, type) {
+        var file = new Blob([data], { type: type });
+        if (window.navigator.msSaveOrOpenBlob){
+            window.navigator.msSaveOrOpenBlob(file, filename);
+        }
+        else{
+            var a = document.createElement("a"), url = URL.createObjectURL(file);
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            setTimeout(function () {
+                document.body.removeChild(a);
+                window.URL.revokeObjectURL(url);
+            }, 0);
+        }
+    }
+    
+    
 const toggleSwitch = document.querySelector(
     '.theme-switch input[type="checkbox"]'
   );
@@ -54,6 +113,8 @@ const toggleSwitch = document.querySelector(
     });
     
 $("#btnNuevo").click(function(){
+    $('#btnDescargar').css('display', 'none');
+     $('#btnSubir').css('display', 'inherit');
     $("#formRecetas").trigger("reset");
     $(".modal-header").css("background-color", "#1cc88a");
     $(".modal-header").css("color", "white");
@@ -67,6 +128,8 @@ var fila; //capturar la fila para editar o borrar el registro
     
 //botón EDITAR    
 $(document).on("click", ".btnEditar", function(){
+    $('#btnDescargar').css('display', 'inherit');
+    $('#btnSubir').css('display', 'none');
     fila = $(this).closest("tr");
     id = parseInt(fila.find('td:eq(0)').text());
     nombre = fila.find('td:eq(1)').text();

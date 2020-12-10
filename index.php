@@ -42,7 +42,7 @@
     </section>
 
     <section id="acerca">
-      <p id="titulo">ACERCA</p>
+      <!--<p id="titulo">ACERCA</p>
       <div id="acerca1">
         <img id="imagen1" src="vistas/images/orangehair.png" alt="chico cocinando">
         <div id="texto1">
@@ -54,9 +54,9 @@
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat obcaecati nobis suscipit ipsam doloremque, eaque est. Tempora vero nam totam explicabo, aut neque voluptatum, corporis voluptatem temporibus assumenda in possimus.</p>
         </div>
         <img id="imagen2" src="vistas/images/cookin.png" alt="cocinando">
-      </div>
+      </div> 
       <div id="creds">
-        <h1>made with <3 </h1> </div> </section> <section id="login">
+        <h1>made with <3 </h1> </div>--> </section> <section id="login">
 
             <div id="id01" class="modal">
               <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Cerrar">&times;</span>

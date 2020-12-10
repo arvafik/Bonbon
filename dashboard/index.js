@@ -1,4 +1,34 @@
 console.log("index js")
+
+
+function uploadXML() {
+            document.getElementById("file").click();
+        }
+          var readXml=null;
+
+ $('#file').on('change', function () {
+     event.preventDefault();
+           var selectedFile = document.getElementById('file').files[0];
+           console.log(selectedFile);
+           var reader = new FileReader();
+           reader.onload = function(e) {
+               readXml=e.target.result;
+               console.log(readXml);
+               var parser = new DOMParser();
+               var doc = parser.parseFromString(readXml, "application/xml");
+               $('#nombre').val(doc.all[1].innerHTML);
+               $('#descripcion').val(doc.all[2].innerHTML);
+               $('#dificultad').val(doc.all[3].innerHTML);
+               $('#tiempococcion').val(doc.all[4].innerHTML);
+               $('#categoria').val(doc.all[5].innerHTML);
+           }
+           reader.readAsText(selectedFile);
+     
+});       
+        
+      
+
+
 const toggleSwitch = document.querySelector(
     '.theme-switch input[type="checkbox"]'
   );
